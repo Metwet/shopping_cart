@@ -1,0 +1,53 @@
+:root {
+    --system-violet: #6725A8;
+    --system-magenta: #CB11AB;
+    --system-white: #FFFFFF;
+    --text-black: #000000;
+    --system-green: #0CB477;
+    --system-red: #F55123;
+    --system-gray: #A0A0A4;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--system-violet);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header__container {
+    padding: 16px 3px 16px 24px;
+    max-width: 1373px;
+    display: flex;
+    align-items: end;
+}
+
+.header__menu_btn {
+    display: flex;
+    padding: 12px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    margin-right: 16px;
+}
+
+.header__menu_btn:hover {
+    border: 1px solid var(--system-white);
+}
+
+.header__logo {
+    color: var(--system-white);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 85.714% */
+    font-variant: all-small-caps;
+    letter-spacing: 0.56px;
+    margin-right: 32px;
+}
