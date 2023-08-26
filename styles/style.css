@@ -805,7 +805,7 @@ body {
 /* footer */
 
 .footer__container {
-    padding: 25px 5px;
+    padding: 25px 0;
     text-align: center;
     width: 100%;
     color: rgba(255, 255, 255, 0.70);
