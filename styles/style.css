@@ -421,6 +421,8 @@ body {
     border-radius: 16px;
     width: 381px;
     margin-left: 32px;
+    position: sticky;
+    top: 10px;
 }
 
 .basket__siderbar-result {
@@ -743,4 +745,73 @@ body {
 
 .payment-section__text {
     color: var(--system-gray);
+}
+
+/* user-section */
+
+.user__data {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.user__input {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid var(--rulers-rulers-input);
+    color: var(--text-black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 4px;
+}
+
+.user__input::placeholder {
+    color: var(--rulers-rulers-input);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.user__input:focus {
+    border: none;
+    border-bottom: 1px solid var(--rulers-rulers-input);
+    outline: none;
+}
+
+.tax__number {
+    width: 100%;
+    position: relative;
+}
+
+.tax-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 220px;
+    width: 100%;
+    color: var(--text-black);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+/* footer */
+
+.footer__container {
+    padding: 25px 5px;
+    text-align: center;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
 }
