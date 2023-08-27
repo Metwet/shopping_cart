@@ -21,10 +21,6 @@ body {
     margin: 0 auto;
 }
 
-.hide {
-    display: none;
-}
-
 /* header */
 
 .header__container {
@@ -188,6 +184,10 @@ body {
     margin-bottom: 27px;
 }
 
+.basket-checkbox-arrow {
+    cursor: pointer;
+}
+
 .basket-section__checkbox-all {
     display: flex;
     justify-content: space-between;
@@ -348,7 +348,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: -0.2px
+    letter-spacing: -0.2px;
+    cursor: pointer;
 }
 
 .counter__number {
@@ -360,6 +361,7 @@ body {
 
 .last-item {
     color: var(--rulers-rulers-input);
+    cursor: default;
 }
 
 .item-rest {
@@ -626,6 +628,8 @@ body {
     padding-bottom: 18px;
     margin-bottom: 11px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: space-between;
 }
 
 .missing-items {
@@ -1046,4 +1050,8 @@ body {
 .rating-num {
     color: var(--text-black);
     margin-right: 8px;
+}
+
+.hide {
+    display: none;
 }

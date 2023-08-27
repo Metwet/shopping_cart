@@ -43,18 +43,18 @@
                         <div class="basket-section__list">
                             <div class="basket-section__checkbox-all">
                                 <label class="basket-checkbox-all basket-checkbox">
-                                    <input type="checkbox" class="real-checkbox" checked>
+                                    <input type="checkbox" class="real-checkbox" id="all-checkbox" checked>
                                     <span class="custom-checkbox"></span>
                                     <span class="basket-checkbox-text">Выбрать все</span>
                                 </label>
                                 <div class="basket-checkbox-arrow">
-                                    <img src="./img/arrow.svg" alt="arrow_icon">
+                                    <img id="basket-arrow" src="./img/arrow.svg" alt="arrow_icon">
                                 </div>
                             </div>
-                            <div class="basket-section__items">
+                            <div class="basket-section__items" id="moved-by-arrow">
                                 <div class="basket-section__item basket-item-1">
                                     <label class="basket-checkbox item__checkbox">
-                                        <input type="checkbox" class="real-checkbox" checked>
+                                        <input type="checkbox" class="real-checkbox item-checkbox" checked>
                                         <span class="custom-checkbox"></span>
                                     </label>
                                     <div class="item__img">
@@ -104,7 +104,7 @@
 
                                 <div class="basket-section__item basket-item-2">
                                     <label class="basket-checkbox item__checkbox">
-                                        <input type="checkbox" class="real-checkbox" checked>
+                                        <input type="checkbox" class="real-checkbox item-checkbox" checked>
                                         <span class="custom-checkbox"></span>
                                     </label>
                                     <div class="item__img">
@@ -154,7 +154,7 @@
 
                                 <div class="basket-section__item basket-item-3">
                                     <label class="basket-checkbox item__checkbox">
-                                        <input type="checkbox" class="real-checkbox" checked>
+                                        <input type="checkbox" class="real-checkbox item-checkbox" checked>
                                         <span class="custom-checkbox"></span>
                                     </label>
                                     <div class="item__img">
@@ -206,9 +206,14 @@
                     </section>
 
                     <section class="basket-section basket-section__missing">
-                        <div class="basket-section__missing-title">Отсутствуют · 3 товара</div>
+                        <div class="basket-section__missing-title">
+                            <div>Отсутствуют · 3 товара</div>
+                            <div class="basket-checkbox-arrow">
+                                <img src="./img/arrow.svg" alt="arrow_icon" id="missing-arrow">
+                            </div>
+                        </div>
                         <div class="basket-section__list">
-                            <div class="basket-section__items missing-items">
+                            <div class="basket-section__items missing-items" id="missing-moved-by-arrow">
                                 <div class="basket-section__item">
                                     <div class="item__img missing-item__img">
                                         <img src="./img/item1.png" alt="item1">
@@ -334,6 +339,7 @@
                                 <div class="details-second-col details-imgs">
                                     <div class="details-img">
                                         <img src="./img/item1.png" alt="item_img">
+                                        <div class="delivery-count hide">0</div>
                                     </div>
                                     <div class="details-img">
                                         <img src="./img/item2.png" alt="item_img">
@@ -345,7 +351,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="details-row">
+                            <div class="details-row" id="second-delivery">
                                 <div class="details-first-col">7—8 февраля</div>
                                 <div class="details-second-col">
                                     <div class="details-img">
@@ -407,13 +413,13 @@
                 <section class="basket__sidebar">
                     <div class="basket__siderbar-result">
                         <div class="result-title">
-                            <div>Итого</div> <div>2 101 063 <span class="result-com">сом</span></div>
+                            <div>Итого</div> <div class="go-newPrice">2 101 063 <span class="result-com">сом</span></div>
                         </div>
                         <div class="result-goods">
-                            <span>203 товара</span><span>2 302 048 сом</span>
+                            <span class="go-delivery-goods">203 товара</span><span class="go-oldPrice">2 302 048 сом</span>
                         </div>
                         <div class="result-discount">
-                            <span>Скидка</span><span>−200 985 сом</span>
+                            <span>Скидка</span><span class="go-discount">−200 985 сом</span>
                         </div>
                         <div class="result-delivery">
                             <span>Доставка</span><span>Бесплатно</span>
@@ -676,5 +682,6 @@
     </section>
 
     <script src="./scripts/script-popups.js"></script>
+    <script src="./scripts/script-counter.js"></script>
 </body>
 </html>
