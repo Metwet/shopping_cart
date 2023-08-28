@@ -9,6 +9,7 @@
     --rulers-rulers-input: rgba(0, 0, 0, 0.20);
     --background-smoky: #F6F6FA;
     --dark-system-coral: #FF3B30;
+    --error: #fa0d0d;
 }
 
 body {
@@ -817,12 +818,12 @@ body {
     outline: none;
 }
 
-.tax__number {
+.input__block {
     width: 100%;
     position: relative;
 }
 
-.tax-text {
+.input__subtext {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -833,6 +834,27 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
+}
+
+.input__subtext-orange {
+    color: var(--system-red);
+}
+
+.orange__input {
+    border-bottom: 1px solid var(--system-red);
+}
+
+.orange__input::placeholder {
+    color: var(--system-red);
+}
+
+.input__subtext-red {
+    color: var(--error);
+}
+
+.red__input {
+    border-bottom: 1px solid var(--error);
+    color: var(--error);
 }
 
 /* footer */

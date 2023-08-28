@@ -397,16 +397,48 @@
                             </div>
                         </div>
                         <div class="user__data">
-                            <input placeholder="Имя" type="text" class="user__input" id="name" name="name">
-                            <input placeholder="Фамилия" type="text" class="user__input" id="surname" name="surname">
+                            <div class="input__block">
+                                <input placeholder="Имя" type="text" class="user__input" id="name" name="name">
+                                <div class="input__subtext input__subtext-orange input__subtext-name hide">
+                                    Укажите имя
+                                </div>
+                            </div>
+                            <div class="input__block">
+                                <input placeholder="Фамилия" type="text" class="user__input" id="surname" name="surname">
+                                <div class="input__subtext input__subtext-orange  input__subtext-surname hide">
+                                    Введите фамилию
+                                </div>
+                            </div>
                         </div>
                         <div class="user__data">
-                            <input placeholder="Почта" type="email" class="user__input" id="email" name="email">
-                            <input placeholder="+7" type="tel" class="user__input" id="tel" name="tel">
-                            <div class="tax__number">
+                            <div class="input__block">
+                                <input placeholder="Почта" type="email" class="user__input" id="email" name="email">
+                                <div class="input__subtext input__subtext-orange  input__subtext-email hide">
+                                    Укажите электронную почту
+                                </div>
+                                <div class="input__subtext input__subtext-red input-email-error hide">
+                                    Проверьте адрес электронной почты
+                                </div>
+                            </div>
+                            <div class="input__block">
+                                <input placeholder="+7" type="tel" class="user__input" id="phone" name="tel">
+                                <div class="input__subtext input__subtext-orange  input__subtext-phone hide">
+                                    Укажите номер телефона
+                                </div>
+                                <div class="input__subtext input__subtext-red input-phone-error hide">
+                                    Формат: +9 999 999 99 99
+                                </div>
+                            </div>
+                            <div class="input__block">
                                 <input placeholder="ИНН" type="text" class="user__input" id="tax" name="tax">
-                                <div class="tax-text">
+                                <div class="input__subtext input__subtext-why">
                                     Для таможенного оформления
+                                </div>
+                                <div class="input__subtext input__subtext-orange input__subtext-tax hide">
+                                    Укажите ИНН
+                                </div>
+                                <div class="input__subtext input__subtext-red input-tax-error hide">
+                                    Проверьте ИНН
                                 </div>
                             </div>
                         </div>
@@ -469,7 +501,7 @@
                         </div>
                     </div>
                     <div class="basket__siderbar-order">
-                        <button class="order-btn">Заказать</button>
+                        <button class="order-btn submit-button">Заказать</button>
                     </div>
                     <div class="basket__siderbar-agreement">
                         <div class="agreement-logo">
@@ -686,5 +718,6 @@
 
     <script src="./scripts/script-popups.js"></script>
     <script src="./scripts/script-counter.js"></script>
+    <script src="./scripts/script-inputs.js"></script>
 </body>
 </html>

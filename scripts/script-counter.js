@@ -218,7 +218,7 @@ function updateDeliveryCount(index) {
         deliveryCounts[index].innerHTML = "184";
         deliveryCounts[3].innerHTML = goodsCount - 184;
     } else {
-        if(deliveryCounts[1].innerHTML == "184"){
+        if(index === 1 && deliveryCounts[1].innerHTML == "184"){
             secondDelibery.classList.add('hide');
         }
         deliveryCounts[index].innerHTML = goodsCount;
