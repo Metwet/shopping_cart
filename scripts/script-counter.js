@@ -1,12 +1,22 @@
 //hide by arrow
+const collapsedBlock = document.querySelector('.collapsed');
+const chechboxAllBlock = document.querySelector('.basket-checkbox-all');
 
-const toggleBlockVisibility = (button, block, isBlockVisible) => {
+const toggleBlockVisibility = (button, block, isBlockVisible, isCollapsedBlock) => {
     if (isBlockVisible) {
         block.classList.add('hide');
         button.style.transform = 'rotate(180deg)';
+        if(isCollapsedBlock){
+            collapsedBlock.classList.remove('hide');
+            chechboxAllBlock.classList.add('hide');
+        }
     } else {
         block.classList.remove('hide');
         button.style.transform = 'rotate(0deg)';
+        if(isCollapsedBlock){
+            collapsedBlock.classList.add('hide');
+            chechboxAllBlock.classList.remove('hide');
+        }
     }
 
     return !isBlockVisible;
@@ -17,7 +27,7 @@ const basketMovedBlock = document.getElementById('moved-by-arrow');
 let isBasketVisible = true;
 
 basketArrow.addEventListener('click', () => {
-    isBasketVisible = toggleBlockVisibility(basketArrow, basketMovedBlock, isBasketVisible);
+    isBasketVisible = toggleBlockVisibility(basketArrow, basketMovedBlock, isBasketVisible, true);
 });
 
 const missingArrow = document.getElementById('missing-arrow');
@@ -58,9 +68,11 @@ const deliveryImg = document.querySelectorAll('.details-img');
 const secondDelibery = document.getElementById('second-delivery');
 
 const totalNewPriceElement = document.querySelector('.go-newPrice');
+const totalPriceCollapsedElement = document.querySelector('.collapsed-price');
 const totalOldPriceElement = document.querySelector('.go-oldPrice');
 const totalDiscountElement = document.querySelector('.go-discount');
 const totalDeliveryElement = document.querySelector('.go-delivery-goods');
+const totalDeliveryCollapsedElement = document.querySelector('.collapsed-goods');
 
 
 itemCheckboxes.forEach((checkbox, index) => {
@@ -187,6 +199,8 @@ function updateTotalPrices() {
     } else {
         totalDeliveryElement.textContent = `${totalItemsCount} товара`;
     }
+    totalPriceCollapsedElement.textContent = `${selectedItemsTotalNewPrice.toLocaleString()}`;
+    totalDeliveryCollapsedElement.textContent = `${totalItemsCount}`;
 }
 
 //delivery count 
