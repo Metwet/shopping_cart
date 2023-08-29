@@ -201,6 +201,7 @@ function updateTotalPrices() {
     }
     totalPriceCollapsedElement.textContent = `${selectedItemsTotalNewPrice.toLocaleString()}`;
     totalDeliveryCollapsedElement.textContent = `${totalItemsCount}`;
+    updateOrderButton();
 }
 
 //delivery count 
@@ -222,5 +223,25 @@ function updateDeliveryCount(index) {
             secondDelibery.classList.add('hide');
         }
         deliveryCounts[index].innerHTML = goodsCount;
+    }
+}
+
+//pay now checkbox
+
+const payNowCheckbox = document.querySelector('.pay-now-checkbox');
+const paymentTimeText = document.getElementById('payment-time__text');
+
+payNowCheckbox.addEventListener('change', () => {
+    updateOrderButton();
+});
+
+function updateOrderButton () {
+    if (payNowCheckbox.checked) {
+        const newPrice = totalNewPriceElement.textContent.trim();
+        submitButton.textContent = `Оплатить ${newPrice}`;
+        paymentTimeText.classList.add('hide');
+    } else {
+        submitButton.textContent = 'Заказать';
+        paymentTimeText.classList.remove('hide');
     }
 }
