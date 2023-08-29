@@ -336,6 +336,44 @@ body {
     margin-left: 6px;
 }
 
+.provider-info {
+    cursor: pointer;
+    position: relative;
+}
+
+.provider-hover-info {
+    position: absolute;
+    top: 100%;
+    right: -143px;
+    width: 256px;
+    padding: 10px 16px 14px 16px;
+    border-radius: 8px;
+    background: var(--system-white);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    color: var(--text-black);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.provider-info:hover .provider-hover-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.provider-hover-info-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.provider-hover-info-regnum {
+    margin-bottom: 8px;
+}
+
 .item__count {
     width: 100px;
     margin-right: 16px;
@@ -420,16 +458,52 @@ body {
     padding-bottom: 1px;
 }
 
-.old-price {
+.old-price__block {
     color: var(--system-gray);
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
-    text-decoration: line-through;
+    position: relative;
 }
 
+.old-price {
+    text-decoration: line-through;
+    cursor: pointer;
+}
 
+.old-price-hover {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 256px;
+    padding: 10px 16px 14px 16px;
+    border-radius: 8px;
+    background: var(--system-white);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.old-price__block:hover .old-price-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.old-price__discount {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.disccount-num {
+    color: var(--text-black);
+}
 /* basket__sidebar  */
 
 .basket__sidebar {
@@ -531,6 +605,32 @@ body {
 
 .delivery-info__free {
     color: var(--system-green);
+    cursor: pointer;
+    position: relative;
+}
+
+.delivery-hover-info {
+    position: absolute;
+    top: 100%;
+    right: -143px;
+    width: 256px;
+    padding: 10px 16px 14px 16px;
+    border-radius: 8px;
+    background: var(--system-white);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    color: var(--text-black);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.delivery-info__free:hover .delivery-hover-info {
+    opacity: 1;
+    visibility: visible;
 }
 
 .basket__siderbar-payment {
