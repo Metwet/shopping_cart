@@ -10,6 +10,7 @@
     --background-smoky: #F6F6FA;
     --dark-system-coral: #FF3B30;
     --error: #fa0d0d;
+    --system-smoky-dark: #F0ECF4;
 }
 
 body {
@@ -33,12 +34,12 @@ body {
 
 .header__menu_btn {
     display: flex;
-    padding: 12px 10px;
+    padding: 11px 10px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.45);
-    margin-right: 16px;
+    margin-right: 15px;
 }
 
 .header__menu_btn:hover {
@@ -146,6 +147,10 @@ body {
     line-height: 18px;
 }
 
+.mini-header__container {
+    display: none;
+}
+
 /* main */
 
 .main {
@@ -172,7 +177,7 @@ body {
 }
 
 .basket-section {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
 }
 
 .basket-section__title {
@@ -278,6 +283,10 @@ body {
     margin-bottom: 20px;
 }
 
+.basket-item-2 {
+    margin-bottom: 26px;
+}
+
 .item__checkbox {
     display: flex;
     align-items: center;
@@ -291,6 +300,10 @@ body {
 .item__img img {
     max-width: 72px;
     border-radius: 8px;
+}
+
+.mini-item__size {
+    display: none;
 }
 
 .item__info {
@@ -382,8 +395,8 @@ body {
 .item-counter {
     background: var(--system-white);
     border-radius: 8px;
-    padding: 12px 10px 16px 12px;
-    margin-bottom: 8px;
+    padding: 11px 10px 16px 11px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -422,7 +435,7 @@ body {
 .item__btns {
     display: flex;
     justify-content: end;
-    gap: 16px;
+    gap: 18px;
 }
 
 .item__btn {
@@ -434,7 +447,7 @@ body {
 }
 
 .item_price {
-    width: 120px;
+    width: 110px;
     text-align: right;
 }
 
@@ -504,6 +517,7 @@ body {
 .disccount-num {
     color: var(--text-black);
 }
+
 /* basket__sidebar  */
 
 .basket__sidebar {
@@ -514,6 +528,7 @@ body {
     width: 381px;
     margin-left: 32px;
     position: sticky;
+    margin-top: -10px;
     top: 10px;
 }
 
@@ -663,7 +678,7 @@ body {
 }
 
 .payment-time {
-    padding: 8px 8px 12px;
+    padding: 6px 8px 12px;
     border-radius: 8px;
     background: var(--background-smoky);
 }
@@ -733,7 +748,7 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    padding-bottom: 18px;
+    padding-bottom: 16px;
     margin-bottom: 11px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.10);
     display: flex;
@@ -742,6 +757,14 @@ body {
 
 .missing-items {
     color: var(--system-gray);
+}
+
+.missing__item {
+    margin-bottom: 30px;
+}
+
+.missing__item-2 {
+    margin-bottom: 0px;
 }
 
 .missing-item__img {
@@ -767,11 +790,12 @@ body {
     background: var(--system-white);
     color: var(--text-black);
     padding: 16px 24px 24px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .detail-section__title {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 16px ;
 }
@@ -804,7 +828,7 @@ body {
 }
 
 .details-first-col {
-    width: 178px;
+    width: 153px;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -889,6 +913,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    margin-top: 20px;
 }
 
 .user__input {
@@ -964,7 +989,6 @@ body {
     text-align: center;
     width: 100%;
     color: rgba(255, 255, 255, 0.70);
-    font-family: Segoe UI;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -1181,6 +1205,59 @@ body {
     margin-right: 8px;
 }
 
+.footer__menu {
+    display: none;
+}
+
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    
+    .header__container {
+        padding: 16px 18px 16px 24px;
+        max-width: 982px;
+    }
+    
+    .header__input {
+        max-width: 554px;
+    }
+    
+    .container__main {
+        padding: 10px 24px 16px;
+        max-width: 976px;
+    }
+    
+    .basket__content {
+        max-width: 640px;
+        width: 100%;
+    }
+    
+    .user__data {
+        max-width: 590px;
+    }
+
+    .order-btn {
+        border: none;
+        display: flex;
+        width: 100%;
+        height: 44px;
+        padding: 0px 10px 5px;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        border-radius: 8px;
+        background: var(--system-magenta);
+        color: var(--system-white, #FFF);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        cursor: pointer;
+    }
 }
