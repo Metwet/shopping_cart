@@ -5,10 +5,44 @@ const deliveryDiv = document.getElementById('change-section__delivery');
 const paymentButtons = document.querySelectorAll('.payment-fix');
 const deliveryButtons = document.querySelectorAll('.delivery-fix');
 const closeButtons = document.querySelectorAll('.close');
+const radioPaymentButtons = document.querySelectorAll('.real-radio-payment');
+let idCheckedRadioPayment = null;
+const radioDeliveryButtons = document.querySelectorAll('.real-radio-delivery');
+let idCheckedRadioDelivery = null;
+
+radioPaymentButtons.forEach((radioButton, index) => {
+    if (radioButton.checked) {
+        idCheckedRadioPayment = index;
+    }
+});
+
+radioDeliveryButtons.forEach((radioButton, index) => {
+    if (radioButton.checked) {
+        idCheckedRadioDelivery = index;
+    }
+});
+
+function getBackCheckedRadioPayment(){
+    radioPaymentButtons.forEach((radioButton, index) => {
+        if (radioButton.checked && index != idCheckedRadioPayment) {
+            radioPaymentButtons[idCheckedRadioPayment].checked = true;
+        }
+    });
+}
+
+function getBackCheckedRadioDelivery(){
+    radioDeliveryButtons.forEach((radioButton, index) => {
+        if (radioButton.checked && index != idCheckedRadioDelivery) {
+            radioDeliveryButtons[idCheckedRadioDelivery].checked = true;
+        }
+    });
+}
 
 const hideAllPopups = () => {
     paymentDiv.style.display = 'none';
     deliveryDiv.style.display = 'none';
+    getBackCheckedRadioPayment();
+    getBackCheckedRadioDelivery();
 }
 
 const showPayment = () => {
@@ -34,9 +68,11 @@ deliveryButtons.forEach(event => {
 window.onclick = (event) => {
  if(event.target == paymentDiv){
     paymentDiv.style.display = 'none';
+    getBackCheckedRadioPayment();
  }
  if(event.target == deliveryDiv){
     deliveryDiv.style.display = 'none';
+    getBackCheckedRadioDelivery();
  }
 }
 
@@ -64,13 +100,14 @@ btnCourier.addEventListener('click', () => {
 //change delivery text 
 
 const deliveryDoneButton = document.querySelector('.change-btn__delivery');
-const radioDeliveryButtons = document.querySelectorAll('.real-radio-delivery');
 const deliveryTextBlocks = document.querySelectorAll('.go-delivery-text');
+const deliveryTypeBlocks = document.querySelectorAll('.type-of-delivery');
+const deliveryDetails = document.querySelector('.details-worktime');
 
 deliveryDoneButton.addEventListener('click', () => {
     let selectedAddress = '';
 
-    radioDeliveryButtons.forEach(radioButton => {
+    radioDeliveryButtons.forEach((radioButton, index) => {
         if (radioButton.checked) {
             const radioLabel = radioButton.closest('.change__radio');
             const addressTextElement = radioLabel.querySelector('.change__radio-text');
@@ -79,6 +116,27 @@ deliveryDoneButton.addEventListener('click', () => {
             cleanAddressText.querySelectorAll('img').forEach(img => img.remove());
 
             selectedAddress = cleanAddressText.textContent.trim();
+
+            idCheckedRadioDelivery = index;
+            if(index < 3){
+                deliveryTypeBlocks.forEach((deliveryBlock, index)=>{
+                    if(index){
+                        deliveryBlock.innerHTML = 'Доставка курьером';
+                    }else{
+                        deliveryBlock.innerHTML = 'Курьером';   
+                    }
+                });
+                deliveryDetails.classList.add('hide');
+            } else {
+                deliveryTypeBlocks.forEach((deliveryBlock, index)=>{
+                    if(index){
+                        deliveryBlock.innerHTML = 'Доставка в пункт выдачи';
+                    }else{
+                        deliveryBlock.innerHTML = 'Пункт выдачи';   
+                    }
+                });
+                deliveryDetails.classList.remove('hide');
+            }
         }
     });
 
@@ -93,7 +151,6 @@ deliveryDoneButton.addEventListener('click', () => {
 
 //change payment text 
 
-const radioPaymentButtons = document.querySelectorAll('.real-radio-payment');
 const paymentTextBlocks = document.querySelectorAll('.go-payment-data');
 const paymentDoneButton = document.querySelector('.change-btn__payment');
 
@@ -101,11 +158,12 @@ paymentDoneButton.addEventListener('click', () => {
     let selectedText = '';
     let selectedImg = '';
 
-    radioPaymentButtons.forEach(radioButton => {
+    radioPaymentButtons.forEach((radioButton, index) => {
         if (radioButton.checked) {
             const radioLabel = radioButton.closest('.change__radio');
             selectedText = radioLabel.querySelector('.change__radio-text').textContent.trim();
             selectedImg = radioLabel.querySelector('.change__img img').src;
+            idCheckedRadioPayment = index;
         }
     })
 

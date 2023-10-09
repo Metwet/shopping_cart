@@ -165,7 +165,7 @@ function updateItemPrice(index){
     
     newPriceBlock.textContent = `${newPrice.toLocaleString()} сом`;
     oldPriceBlock.textContent = `${oldPrice.toLocaleString()} сом`;
-    updateTotalPrices()
+    updateTotalPrices();
 }
 
 function updateTotalPrices() {
@@ -245,3 +245,68 @@ function updateOrderButton () {
         paymentTimeText.classList.remove('hide');
     }
 }
+
+// delete items
+const deleteButtons = document.querySelectorAll('.item__btn-delete');
+const items = document.querySelectorAll('.basket-section__item');
+let countMissingDelete = 0;
+
+deleteButtons.forEach((deleteButton, index)=>{
+    deleteButton.addEventListener('click', ()=>{
+        items[index].classList.add('hide');
+        if(index < 3){
+            itemCheckboxes[index].checked = false;
+            updateTotalPrices();
+            updateDeliveryCount(index);
+            deliveryImg[index].classList.add('hide');
+            if(index===1){
+                secondDelibery.classList.add('hide');
+            }
+            if(!itemCheckboxes[0].checked && !itemCheckboxes[1].checked  && !itemCheckboxes[2].checked){
+                const basketListElement = document.querySelectorAll('.basket-section__list');
+                basketListElement[0].innerHTML = '<h2>Корзина пуста</h2>';
+            }
+            changeShoppingStatus();
+        }else{
+            countMissingDelete++;
+            console.log(countMissingDelete);
+        }
+        
+        if(countMissingDelete===3){
+            const missingElement = document.querySelector('.basket-section__missing');
+            missingElement.classList.add('hide');
+        }
+    })
+});
+
+function changeShoppingStatus(){
+    const statusElement = document.querySelectorAll('.shopping-status');
+    statusElement.forEach((status)=>{
+        let oldNumber = parseInt(status.textContent);
+        oldNumber--;
+        if(oldNumber){
+            status.textContent = oldNumber;
+        } else {
+            status.classList.add('hide');
+        }
+    });
+}
+
+// like items
+
+const likeImg = document.querySelectorAll('.like');
+const likedImg = document.querySelectorAll('.liked');
+
+likeImg.forEach((like, index)=> {
+    like.addEventListener('click', ()=>{
+        like.style.display = 'none';
+        likedImg[index].style.display = 'block';
+    })
+});
+
+likedImg.forEach((liked, index)=> {
+    liked.addEventListener('click', ()=>{
+        liked.style.display = 'none';
+        likeImg[index].style.display = 'block';
+    });
+});

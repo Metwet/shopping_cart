@@ -33,9 +33,22 @@ inputs.forEach(input => {
 
 submitButton.addEventListener('click', (event)=> {
     event.preventDefault();
+    let scrollToInput = null;
+
     inputs.forEach(input => {
         validateInput(input);
+        const inputValue = input.value.trim();
+        
+        if (inputValue === '') {
+            if (!scrollToInput) {
+                scrollToInput = input;
+            }
+        }
     });
+
+    if (scrollToInput) {
+        scrollToInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
 });
 
 //email validation
@@ -145,8 +158,8 @@ phoneInput.addEventListener('input', () => {
         inputValue = '+' + inputValue;
     }
     
-    if (inputValue.length > 30) {
-        inputValue = inputValue.slice(0, 30);
+    if (inputValue.length > 12) {
+        inputValue = inputValue.slice(0, 12);
     }
     
     if (inputValue.length > 2) {
@@ -160,9 +173,6 @@ phoneInput.addEventListener('input', () => {
     }
     if (inputValue.length > 13) {
         inputValue = inputValue.slice(0, 13) + ' ' + inputValue.slice(13);
-    }
-    if (inputValue.length > 16) {
-        inputValue = inputValue.slice(0, 16) + ' ' + inputValue.slice(16);
     }
     
     phoneInput.value = inputValue;

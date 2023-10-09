@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/mobile.css" media="(max-width: 992px)">
+    <link rel="stylesheet" href="./styles/mobile.css" media="(max-width: 680px)">
     <title>Shopping cart</title>
 </head>
 <body>
@@ -97,16 +97,17 @@
                                         </div>
                                         <div class="item__count">
                                             <div class="item-counter">
-                                                <span class="counter__minus last-item">−</span>
+                                                <span class="counter__minus last-item">&minus;</span>
                                                 <span class="counter__number">1</span>
                                                 <span class="counter__plus">+</span>
                                             </div>
                                             <div class="item-rest">Осталось 2 шт.</div>
                                             <div class="item__btns">
                                                 <div class="item__btn item__btn-heart">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="like">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"/>
                                                     </svg>
+                                                    <img src="./img/like.svg" alt="like" class="liked">
                                                 </div>
                                                 <div class="item__btn item__btn-delete">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -123,10 +124,10 @@
                                                 <span class="old-price">1051 сом</span>
                                                 <div class="old-price-hover">
                                                     <div class="old-price__discount">
-                                                        <span>Скидка 55%</span><span class="disccount-num">−300 сом</span>
+                                                        <span>Скидка 55%</span><span class="disccount-num">&minus;300 сом</span>
                                                     </div>
                                                     <div class="old-price__discount">
-                                                        <span>Скидка покупателя 10%</span><span class="disccount-num">−30 сом</span>
+                                                        <span>Скидка покупателя 10%</span><span class="disccount-num">&minus;30 сом</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,16 +165,17 @@
                                         </div>
                                         <div class="item__count">
                                             <div class="item-counter">
-                                                <span class="counter__minus">−</span>
+                                                <span class="counter__minus">&minus;</span>
                                                 <span class="counter__number">200</span>
                                                 <span class="counter__plus">+</span>
                                             </div>
                                             <div class="item-rest hide"></div>
                                             <div class="item__btns">
                                                 <div class="item__btn item__btn-heart">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="like">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"/>
                                                     </svg>
+                                                    <img src="./img/like.svg" alt="like" class="liked">
                                                 </div>
                                                 <div class="item__btn item__btn-delete">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -190,10 +192,10 @@
                                                 <span class="old-price">2 300 047 сом</span>
                                                 <div class="old-price-hover">
                                                     <div class="old-price__discount">
-                                                        <span>Скидка 55%</span><span class="disccount-num">−300 сом</span>
+                                                        <span>Скидка 55%</span><span class="disccount-num">&minus;300 сом</span>
                                                     </div>
                                                     <div class="old-price__discount">
-                                                        <span>Скидка покупателя 10%</span><span class="disccount-num">−30 сом</span>
+                                                        <span>Скидка покупателя 10%</span><span class="disccount-num">&minus;30 сом</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -231,16 +233,17 @@
                                         </div>
                                         <div class="item__count">
                                             <div class="item-counter">
-                                                <span class="counter__minus">−</span>
+                                                <span class="counter__minus">&minus;</span>
                                                 <span class="counter__number">2</span>
                                                 <span class="counter__plus last-item">+</span>
                                             </div>
                                             <div class="item-rest">Осталось 2 шт.</div>
                                             <div class="item__btns">
                                                 <div class="item__btn item__btn-heart">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="like">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"/>
                                                     </svg>
+                                                    <img src="./img/like.svg" alt="like" class="liked">
                                                 </div>
                                                 <div class="item__btn item__btn-delete">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -257,10 +260,10 @@
                                                 <span class="old-price">950 сом</span>
                                                 <div class="old-price-hover">
                                                     <div class="old-price__discount">
-                                                        <span>Скидка 55%</span><span class="disccount-num">−300 сом</span>
+                                                        <span>Скидка 55%</span><span class="disccount-num">&minus;300 сом</span>
                                                     </div>
                                                     <div class="old-price__discount">
-                                                        <span>Скидка покупателя 10%</span><span class="disccount-num">−30 сом</span>
+                                                        <span>Скидка покупателя 10%</span><span class="disccount-num">&minus;30 сом</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,9 +299,10 @@
                                     <div class="item__count">
                                         <div class="item__btns">
                                             <div class="item__btn missing-item__btn item__btn-heart">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="like">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"/>
                                                 </svg>
+                                                <img src="./img/like.svg" alt="like" class="liked">
                                             </div>
                                             <div class="item__btn missing-item__btn item__btn-delete">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -328,9 +332,10 @@
                                     <div class="item__count">
                                             <div class="item__btns">
                                             <div class="item__btn missing-item__btn item__btn-heart">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="like">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"/>
                                                 </svg>
+                                                <img src="./img/like.svg" alt="like" class="liked">
                                             </div>
                                             <div class="item__btn missing-item__btn item__btn-delete">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -360,9 +365,10 @@
                                     <div class="item__count">
                                         <div class="item__btns">
                                             <div class="item__btn missing-item__btn item__btn-heart">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="like">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"/>
                                                 </svg>
+                                                <img src="./img/like.svg" alt="like" class="liked">
                                             </div>
                                             <div class="item__btn missing-item__btn item__btn-delete">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -386,7 +392,7 @@
                         </div>
                         <div class="delivery-details">
                             <div class="details-row">
-                                <div class="details-first-col">Пункт выдачи</div>
+                                <div class="details-first-col type-of-delivery">Пункт выдачи</div>
                                 <div class="details-second-col">
                                     <div class="details-address go-delivery-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
                                     <div class="details-worktime">
@@ -523,7 +529,7 @@
                             <span class="go-delivery-goods">203 товара</span><span class="go-oldPrice">2 302 048 сом</span>
                         </div>
                         <div class="result-discount">
-                            <span>Скидка</span><span class="go-discount">−200 985 сом</span>
+                            <span>Скидка</span><span class="go-discount">&minus;200 985 сом</span>
                         </div>
                         <div class="result-delivery">
                             <span>Доставка</span><span>Бесплатно</span>
@@ -531,7 +537,7 @@
                     </div>
                     <div class="basket__siderbar-delivery">
                         <div class="delivery-title">
-                            <span>Доставка в пункт выдачи</span><img class="delivery-fix" src="./img/pen.svg" alt="change_icon">
+                            <span class="type-of-delivery">Доставка в пункт выдачи</span><img class="delivery-fix" src="./img/pen.svg" alt="change_icon">
                         </div>
                         <div class="delivery-address go-delivery-text">
                             Бишкек, улица Ахматбека Суюмбаева, 12/1
