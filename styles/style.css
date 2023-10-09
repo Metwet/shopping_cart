@@ -832,6 +832,7 @@ body {
     font-weight: 700;
     line-height: 24px;
     cursor: pointer;
+    padding-top: 7px;
 }
 
 .delivery-details {
@@ -916,14 +917,26 @@ body {
 }
 
 .payment-card__date {
-    margin-left: 12px;
+    margin-left: 9px;
 }
 
 .payment-section__text {
     color: var(--system-gray);
 }
 
+.payment-data-first {
+    margin-bottom: 8px;
+}
+
 /* user-section */
+
+.user-section {
+    margin-bottom: 2px;
+}
+
+.user-section__title {
+    margin-bottom: 33px;
+}
 
 .user__data {
     max-width: 700px;
@@ -1252,7 +1265,7 @@ body {
     }
     
     .container__main {
-        padding: 10px 24px 16px;
+        padding: 10px 24px 0;
         max-width: 976px;
     }
 
